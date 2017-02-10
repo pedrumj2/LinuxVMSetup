@@ -44,8 +44,16 @@
 #eval "sudo apt-get -y install unzip"
 #eval "sudo apt-get -y install xsltproc"
 
+#eval "sudo apt-get -y install default-jdk"
+#eval "sudo apt-get install libmysql-java"
+
+(cd ~
+ #eval "echo \"export CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java.jar\" >> .bashrc"
+  eval "export CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java.jar"
+)
+
 #eval "wget https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download"
-  #eval "mv uc\?id\=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA gdrive"
+#eval "mv uc\?id\=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA gdrive"
 #eval "chmod +x gdrive"
 #eval "sudo install gdrive /usr/local/bin/gdrive"
 #eval "rm gdrive"
@@ -53,10 +61,13 @@
 #eval "git clone git@github.com:pedrumj2/Pcap_extractor"
   #eval "git clone git@github.com:pedrumj2/XML2CSV"
   #eval "git clone git@github.com:pedrumj2/net_header_database"
+  
   #eval "chown -R sjalalim:   XML2CSV"
   #eval "chown -R sjalalim:   net_header_database"
   #eval "git clone git@github.com:pedrumj2/mysql_csv_import"
   #eval "chown -R sjalalim:   mysql_csv_import"
  
+  #eval "git clone git@github.com:pedrumj2/Net_Flow_Gen"
+  #eval "chown -R sjalalim:   Net_Flow_Gen"
 )
 
