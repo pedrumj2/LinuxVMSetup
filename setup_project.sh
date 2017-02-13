@@ -16,10 +16,10 @@
 
 #eval "chmod +x ../mysql_csv_import/script.sh"
 #eval "chmod +x ../net_header_database/initDB.sh"
-eval "chmod +x ../net_header_database/process_csv.sh"
+#eval "chmod +x ../net_header_database/process_csv.sh"
 
 #eval "../mysql_csv_import/./script.sh fafdRE\\\$3 D11 ../Pcap_extractor/CSV"
 #eval "../net_header_database/./initDB.sh fafdRE\\\$3 D11"
-eval "../net_header_database/./process_csv.sh fafdRE\\\$3 D11"
+#eval "../net_header_database/./process_csv.sh fafdRE\\\$3 D11"
 
 
