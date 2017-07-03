@@ -8,7 +8,7 @@ fi
 
 #mv id_rsa ~/.ssh/
 #mv id_rsa.pub ~/.ssh/
-
+#chmod 400 ~/.ssh/id_rsa
 #git remote set-url origin git@github.com:pedrumj2/LinuxVMSetup.git
 #apt-get -y update        # Fetches the list of available updates
 #apt-get -y upgrade       # Strictly upgrades the current packages
@@ -83,13 +83,14 @@ fi
 #)
 #
 #chmod a+r /usr/local/cuda/lib64/libcudnn*
-echo export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64" >> ~/.bashrc
-echo export CUDA_HOME=/usr/local/cuda >> ~/.bashrc
-source ~/.bashrc
+#echo export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64" >> ~/.bashrc
+#echo export CUDA_HOME=/usr/local/cuda >> ~/.bashrc
+#source ~/.bashrc
 
 #
 #sudo -H pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.2.1-cp27-none-linux_x86_64.whl
 #sudo -H pip install --upgrade tensorflow-gpu
+sudo -H pip install --upgrade pymysql
 
 
 
