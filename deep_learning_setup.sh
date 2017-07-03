@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
 fi
-#
+
 #apt-get -y update        # Fetches the list of available updates
 #apt-get -y upgrade       # Strictly upgrades the current packages
 #apt-get -y dist-upgrade  
@@ -38,15 +38,49 @@ fi
 # eval "echo \"export CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java.jar\" >> .bashrc"
 #  eval "export CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java.jar"
 #)
-
-
-git config --global user.email "pedrum.jalali@gmail.com"
-git config --global user.name "pedrum"
-
+#
+#
 #apt-get -y install python-pip python-dev build-essential
-#pip install --upgrade pip 
-# 
+#pip install --upgrade pip  
 #pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.2.1-cp27-none-linux_x86_64.whl
+#
+
+
+#wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
+#mv cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+#sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+#
+#sudo apt-get -y update
+#sudo apt-get -y install cuda
+#rm cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+
+#wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/patches/2/cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64-deb
+#mv cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64-deb cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb
+#dpkg -i cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb
+#rm cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb
+#apt-get -y update
+#apt-get -y install cuda
+
+#gdrive download 0Bwn99sXw-O9PM2lSTGNiWTdCaGs
+#tar -xzf cudnn-8.0-linux-x64-v6.0.solitairetheme8
+
+#(cd cuda/include/
+#  mv cudnn.h /usr/local/cuda/include/
+#)
+#
+#(cd cuda/lib64/
+#  mv * /usr/local/cuda/lib64/
+#)
+
+chmod a+r /usr/local/cuda/lib64/libcudnn*
+
+#export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
+
+#wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/375.66/NVIDIA-Linux-x86_64-375.66.run"
+#apt-get -y install build-essential
+#echo 'blacklist nouveau
+#option nouveau modeset=0' >  /etc/modprobe.d/blacklist-nouveau.conf 
+#update-initramfs -u
 
 
 #wget "https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download"
