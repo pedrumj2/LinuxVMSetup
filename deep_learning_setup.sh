@@ -16,6 +16,7 @@ user=$(logname)
 (sudo -v -u $user
   git config user.email "pedrum.jalali@gmail.com"
   git config user.name "pedrum"
+  git config --global push.default matching
 )
 #install mysql
 export DEBIAN_FRONTEND="noninteractive"
