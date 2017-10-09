@@ -10,6 +10,13 @@ apt-get -y update        # Fetches the list of available updates
 apt-get -y upgrade       # Strictly upgrades the current packages
 apt-get -y dist-upgrade  
 
+
+user=$(logname)
+
+(sudo -v -u $user
+  git config user.email "pedrum.jalali@gmail.com"
+  git config user.name "pedrum"
+)
 #install mysql
 export DEBIAN_FRONTEND="noninteractive"
 eval "debconf-set-selections <<< \"mysql-server mysql-server/root_password password fafdRE33\""
