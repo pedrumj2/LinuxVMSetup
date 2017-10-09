@@ -6,10 +6,18 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+
+#install gdrive
+wget "https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download"
+mv "uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download" gdrive
+chmod +x gdrive
+install gdrive /usr/local/bin/gdrive
+rm gdrive
+gdrive list
+
 apt-get -y update        # Fetches the list of available updates
 apt-get -y upgrade       # Strictly upgrades the current packages
 apt-get -y dist-upgrade  
-
 
 user=$(logname)
 
@@ -18,6 +26,7 @@ user=$(logname)
   git config user.name "pedrum"
   git config --global push.default matching
 )
+
 #install mysql
 export DEBIAN_FRONTEND="noninteractive"
 eval "debconf-set-selections <<< \"mysql-server mysql-server/root_password password fafdRE33\""
@@ -50,12 +59,7 @@ apt-get install libmysql-java
 apt-get -y install python-pip python-dev build-essential
 sudo -H pip install --upgrade pip  
 
-#install gdrive
-wget "https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download"
-mv "uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download" gdrive
-chmod +x gdrive
-install gdrive /usr/local/bin/gdrive
-rm gdrive
+
 
 sudo -H pip install --upgrade tensorflow
 sudo -H pip install --upgrade pymysql
